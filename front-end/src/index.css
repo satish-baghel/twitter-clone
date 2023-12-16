@@ -1,3 +1,29 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.w-10 {
+  width: 16px;
+}
+.divider {
+  display: flex;
+  align-items: center;
+}
+
+.divider::before,
+.divider::after {
+  flex: 1;
+  content: "";
+  padding: 0.3px;
+  background-color: white;
+  margin: 12px 5px;
+}
+
+.font-smallest {
+  font-size: xx-small;
+}
+.modal-backdrop {
+  background-color: #5b708366 !important;
+}
+
+@media (min-width: 992px) {
+  .vh-lg-height {
+    height: calc(100vh - 45px);
+  }
+}
