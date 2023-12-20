@@ -12,5 +12,6 @@ const StyledModalHeader = styled(ModalHeader)`
   .modal-title {
     width: 100%;
     display: flex;
+    justify-content: center;
   }
 `

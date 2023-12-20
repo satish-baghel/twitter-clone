@@ -1,3 +1,4 @@
+import ModalTypes from "./ModalTypes"
 export const footerData = [
   {
     name: "About",
@@ -76,3 +77,5 @@ export const footerData = [
     link: "/",
   },
 ]
+
+export { ModalTypes }

@@ -10,9 +10,11 @@ export default TButton
 
 const StyleButton = styled(Button)`
   border-radius: 50rem !important;
+  color: black;
   &:hover {
     background-color: ${(props) => {
       return props.color === "secondary" ? "#252526" : null
     }};
+    color: black;
   }
 `
