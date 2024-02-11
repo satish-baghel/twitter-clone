@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit"
 const initialState = {
-  Modals: [],
+  Modals: {},
 }
 const ModalReducer = createSlice({
   name: "@modal",
@@ -8,40 +8,35 @@ const ModalReducer = createSlice({
   reducers: {
     addMultipleModal: (state, action) => {
       const { payload } = action
-
-      const findIndex = state.Modals.findIndex(
-        (_modal) => _modal.modalType === payload.modalType
-      )
-      if (findIndex >= 0) {
-        state.Modals[findIndex][`showModal`] = payload.showModal
-        state.Modals[findIndex][`modalContent`] = payload.modalContent
+      if (state.Modals.hasOwnProperty(payload.modalType)) {
+        state.Modals[payload.modalType].showModal = true
         return
       }
-
-      state.Modals.push(payload)
+      let newObj = {
+        [payload.modalType]: {
+          showModal: payload.showModal,
+          modalType: payload.modalType,
+        },
+      }
+      state.Modals = Object.assign({}, state.Modals, newObj)
     },
     addSingleModal: (state, action) => {
       const { payload } = action
-      const lastIndex = state.Modals.length - 1
-      if (lastIndex >= 0) {
-        state.Modals[lastIndex][`showModal`] = payload.showModal
-        state.Modals[lastIndex][`modalContent`] = payload.modalContent
-        state.Modals[lastIndex][`modalType`] = payload.modalType
+      if (state.Modals.hasOwnProperty(payload.modalType)) {
+        state.Modals[payload.modalType].showModal = true
         return
       }
-      state.Modals.push(payload)
+      let newObj = {
+        [payload.modalType]: {
+          showModal: payload.showModal,
+          modalType: payload.modalType,
+        },
+      }
+      state.Modals = newObj
     },
     closeModal: (state, action) => {
       const { payload } = action
-      state.Modals = state.Modals.map((q) => {
-        if (q.modalType === payload.modalType) {
-          return {
-            ...q,
-            showModal: false,
-          }
-        }
-        return q
-      })
+      state.Modals[payload.modalType].showModal = false
     },
   },
 })

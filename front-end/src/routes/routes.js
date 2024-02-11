@@ -1,8 +1,8 @@
-import Home from "../pages/Home/Home"
+import Auth from "../pages/Auth/Auth"
 
 export const publicRoute = [
   {
-    component: <Home />,
+    component: <Auth />,
     path: "/",
   },
 ]
