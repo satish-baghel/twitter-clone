@@ -27,3 +27,8 @@
     height: calc(100vh - 45px);
   }
 }
+
+.icon-size {
+  width: 27px !important;
+  color: white;
+}

@@ -1,5 +1,6 @@
 import TButton from "./Button/Button"
 import FormGroup from "./FromGroup/FormGroup"
+import Header from "./Header/Header"
 import TLabel from "./Label/Label"
 import TModal from "./Modal/Modal"
 import TModalFooter from "./ModalFooter/ModalFooter"
@@ -16,4 +17,5 @@ export {
   TLabel as Label,
   SelectField,
   TModalFooter as ModalFooter,
+  Header,
 }
