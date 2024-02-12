@@ -22,6 +22,8 @@ import BookmarkFill from "./BookmarkFill"
 import ProfileLine from "./ProfileLine"
 import ProfileFill from "./ProfileFill"
 import MoreLine from "./MoreLine"
+import Cog from "./Cog"
+
 export {
   Google,
   Apple,
@@ -47,4 +49,5 @@ export {
   ProfileLine,
   ProfileFill,
   MoreLine,
+  Cog,
 }

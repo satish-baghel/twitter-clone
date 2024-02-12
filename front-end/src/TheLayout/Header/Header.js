@@ -19,8 +19,8 @@ const Headers = () => {
             {Array.isArray(navBar) &&
               navBar.map((nav, i) => {
                 return (
-                  <Link to={nav?.url || ""}>
-                    <Row key={i} className="my-2">
+                  <Link to={nav?.url || ""} key={i}>
+                    <Row className="my-2">
                       <Col md="2">{nav.lineIcon}</Col>
                       <Col md="10">
                         <h5 className="text-white">{nav.title}</h5>
@@ -29,8 +29,8 @@ const Headers = () => {
                   </Link>
                 )
               })}
-            <Col md="10">
-              <Button color="primary" className="w-100 py-3 fw-bold text-white">
+            <Col md="10" className="mt-2">
+              <Button color="primary" className="w-100 py-2 fw-bold text-white">
                 Post
               </Button>
             </Col>

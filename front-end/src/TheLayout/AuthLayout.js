@@ -9,7 +9,9 @@ const AuthLayout = (props) => {
         <Col md="3">
           <Header />
         </Col>
-        <Col md="6">Body</Col>
+        <Col md="6" className="border-start border-end border-secondary">
+          {props.children}
+        </Col>
         <Col md="3">Side bar</Col>
       </Row>
       {props.children}

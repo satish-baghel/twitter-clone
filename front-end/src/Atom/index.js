@@ -1,7 +1,10 @@
+import Avatar from "./Avatar/Avatar"
 import TButton from "./Button/Button"
 import FormGroup from "./FromGroup/FormGroup"
 import Header from "./Header/Header"
 import TLabel from "./Label/Label"
+import Mention from "./Mention/Mention"
+import MenuItem from "./MenuItem/MenuItem"
 import TModal from "./Modal/Modal"
 import TModalFooter from "./ModalFooter/ModalFooter"
 import EModalHeader from "./ModalHeader/ModalHeader"
@@ -18,4 +21,7 @@ export {
   SelectField,
   TModalFooter as ModalFooter,
   Header,
+  MenuItem,
+  Mention,
+  Avatar,
 }
